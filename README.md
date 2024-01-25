@@ -23,4 +23,5 @@ CREATE TABLE book_notes (
 ```
 
 To install all requirements: `npm i`.
-To run the website: ``nodemon index.js`.
+
+To run the website: `nodemon index.js`.
