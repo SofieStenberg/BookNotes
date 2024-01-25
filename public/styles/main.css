@@ -1,0 +1,36 @@
+body{
+	background-color: rgb(110, 70, 70);
+	margin-left: 100px;
+}
+
+footer {
+	margin-top: 100px;
+}
+
+
+h1, h2, h3, p, footer, label{
+	color: antiquewhite;
+}
+
+#addNewBook > div, #editBook > div {
+	display: flex;
+	flex-direction: column;
+	margin-top: 10px;
+}
+
+.button {
+	margin-bottom: 5px;
+}
+
+#books > div {
+	display: flex;
+	flex-direction: row;
+}
+
+.container {
+	margin-top: 20px;
+}
+
+.imgContainer {
+	margin-right: 30px;
+}

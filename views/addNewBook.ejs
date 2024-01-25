@@ -1,0 +1,44 @@
+<%- include('partials/header.ejs'); -%>
+
+
+	<form action="/addNewBook" method="post" id="addNewBook" autocomplete="off" >
+		<div style="width: 300px;">
+			<label> Title </label>
+			<input type="text" name=title />
+		</div>
+
+		<div style="width: 300px;">
+			<label> Author </label>
+			<input type="text" name="author" />
+		</div>
+
+		<div style="width: 200px;">
+			<label> ISBN </label>
+			<input type="text" name="isbn"/>
+		</div>
+
+		<div style="width: 100px;">
+			<label> Rating </label>
+			<input type="number" name="rating" />
+		</div>
+
+		<div style="width: 200px;">
+			<label> Last read </label>
+			<input type="date" name="last_read" />
+		</div>
+
+		<div style="width: 500px;">
+			<label> Notes </label>
+			<input type="text" name="notes" />
+		</div>
+
+		<div style="width: 60px;">
+			<input type="submit" name="Submit" />
+		</div>
+
+	</form>
+
+
+
+
+<%- include('partials/footer.ejs'); -%>

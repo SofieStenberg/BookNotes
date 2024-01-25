@@ -1,0 +1,74 @@
+
+<%- include('partials/header.ejs'); -%>
+	
+<div id="header">
+	<h1> Sofie Stenberg </h1>
+	<h2> Books I have read </h2>
+	<p> These are some books that I have read, my review of them and how strongly I recommend to read them. </p>
+</div>
+
+<div id="sorting">
+	<label> Sort by:  </label>
+	<input type="button" value="Last read" class="button" onclick="window.location='/sort/last_read'" />
+	<input type="button" value="Rating" class="button" onclick="window.location='/sort/rating'" />
+	<input type="button" value="Title" class="button" onclick="window.location='/sort/title'" />
+</div>
+
+<div id="add">
+	<input type="button" value="Add new book" onclick="window.location='/checkPass'" />
+</div>
+
+<div id="books">
+	<% if (locals.error) { %>
+		<%= error %>
+	<% } else { %>
+		<% if (locals.books) { %>
+		
+			<% if ( locals.books.length > 0 ) { %>
+				<% for (let i = 0; i < books.length; i++) { %>
+					<div class="container">
+						<div class="imgContainer">
+							<img src="<%= books[i].coverLink %>" alt="Cover image of book" />
+						</div>
+						<div class="metadataContainer">
+							<h3> <%= books[i].title %> by <%= books[i].author  %> </h3>
+							<p> Last read: <%= books[i].last_read %>. Rating: <%= books[i].rating %>/10</p>
+							<p> <%= books[i].notes %> </p>
+
+							<div class="buttonContainer">
+								<input type="button" value="edit" class="button" onclick="window.location='/edit/<%= books[i].id %>'" />
+								<input type="button" value="delete" class="button"  onclick="window.location='/delete/<%= books[i].id %>'" />
+							</div>
+						</div>
+						
+						
+					</div>
+				<% } %>
+			<% } else { %>
+					<div>
+						<p> No books added </p>
+					</div>
+			<% } %>
+		
+		
+		
+		
+		<% } else { %>
+			<p> Something went wrong. </p>
+		<% } %>
+
+
+	<% } %>
+
+	
+</div>
+
+
+
+
+
+
+
+<%- include('partials/footer.ejs'); -%>
+
+
