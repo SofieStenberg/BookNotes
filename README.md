@@ -1,6 +1,6 @@
 # BookNotes
 A website you can store information about books you have read.
-I used the database postgreSQL to store the information and the tables I used looks lika the following;
+I used the database postgreSQL to store the information and the tables I used looks like the following;
 
 ```
 CREATE TABLE books (
